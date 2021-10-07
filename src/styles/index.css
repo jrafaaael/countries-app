@@ -28,15 +28,12 @@ body {
   --font-color: #333;
   --primary-color: rgb(245, 245, 245);
   --secondary-color: snow;
-  --placeholder: #858585;
-
 }
 
 .dark {
   --font-color: snow;
   --primary-color: #192734;
   --secondary-color: #22303c;
-  --placeholder: #f9f9f9;
 }
 
 a {
@@ -45,4 +42,5 @@ a {
 
 svg {
   width: 20px;
+  display: block;
 }
