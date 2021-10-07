@@ -42,3 +42,7 @@ body {
 a {
   text-decoration: none;
 }
+
+svg {
+  width: 20px;
+}
