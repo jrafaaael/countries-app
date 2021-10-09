@@ -8,7 +8,7 @@ import styles from "./navbar.module.css";
 const Navbar = () => {
   const { isDarkMode, handleChangeTheme } = useChangeTheme();
 
-  const themeText = `${isDarkMode ? 'Light' : 'Dark'} mode`
+  const themeText = `${isDarkMode ? "Light" : "Dark"} mode`;
 
   return (
     <nav className={styles.navbar}>
