@@ -23,7 +23,7 @@ const Navbar = () => {
                 new URL(
                   "../../assets/icons/sun.svg",
                   import.meta.url
-                ) as unknown as string
+                ).pathname
               }
             />
           ) : (
@@ -32,7 +32,7 @@ const Navbar = () => {
                 new URL(
                   "../../assets/icons/moon.svg",
                   import.meta.url
-                ) as unknown as string
+                ).pathname
               }
             />
           )}
