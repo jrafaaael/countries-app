@@ -1,9 +1,15 @@
+import CountriesProvider from "./context/countries/CountriesProvider";
+
+import MainRoute from "./routes/MainRoute";
+
+import "./styles/index.css";
+
 const App = () => {
   return (
-    <>
-      Countries App!
-    </>
-  )
-}
+    <CountriesProvider>
+      <MainRoute />
+    </CountriesProvider>
+  );
+};
 
-export default App
+export default App;
