@@ -1,11 +1,11 @@
 import Filters from "../../components/Filters/Filters";
-import Countries from "../../components/Countries/Countries";
+import CountriesList from "../../components/CountriesList/CountriesList";
 
 const Home = () => {
   return (
     <main>
       <Filters />
-      <Countries />
+      <CountriesList />
     </main>
   );
 };
