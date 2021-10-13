@@ -63,3 +63,8 @@ svg {
 svg {
   width: 20px;
 }
+
+*:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
