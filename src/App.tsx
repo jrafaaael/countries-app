@@ -1,9 +1,9 @@
-import MainRoute from "./routes/MainRoute";
+import MainRouter from "./routes/MainRouter";
 
 import "./styles/index.css";
 
 const App = () => {
-  return <MainRoute />;
+  return <MainRouter />;
 };
 
 export default App;
