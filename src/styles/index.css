@@ -26,21 +26,40 @@ body {
   --max-width: 1280px;
 
   --font-color: #333;
+  --alternative-font-color: #666;
+
   --primary-color: rgb(245, 245, 245);
   --secondary-color: snow;
 }
 
 .dark {
   --font-color: snow;
+  --alternative-font-color: #bfbfbf;
+
   --primary-color: #192734;
   --secondary-color: #22303c;
+}
+
+main {
+  width: 100%;
+  padding: 1rem 2rem 2rem 2rem;
+  max-width: calc(var(--max-width) + 4rem);
+  margin: auto;
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
+img,
+svg {
+  display: block;
+}
+
 svg {
   width: 20px;
-  display: block;
 }
