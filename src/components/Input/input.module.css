@@ -1,0 +1,39 @@
+.country__wrapper {
+  width: 100%;
+  max-width: fit-content;
+  position: relative;
+}
+
+.country__wrapper::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/icons/search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.country {
+  width: 100%;
+  padding: .5rem .5rem .5rem 3rem;
+  background-color: var(--secondary-color);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  font-size: 1rem;
+  outline: none;
+}
+
+.country:focus {
+  border-color: #07f;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.continent {
+  text-transform: capitalize;
+}
