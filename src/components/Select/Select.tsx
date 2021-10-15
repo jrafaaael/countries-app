@@ -1,5 +1,8 @@
 import { ChangeEvent } from "react";
+
 import { useCountriesContext } from "../../context/countries/useCountriesContext";
+
+import { ReactSVG } from "react-svg";
 
 import { CONTINENTS } from "../../helpers/constants/CONTINENTS";
 import { capitalize } from "../../helpers/functions/capitalize";
@@ -11,7 +14,7 @@ const Select = () => {
     countries: {
       filterBy: { region },
       loading,
-      error
+      error,
     },
     changeFilter,
   } = useCountriesContext();
@@ -38,15 +41,16 @@ const Select = () => {
             ></option>
           ))}
         </select>
-        <svg className={styles.arrow}>
-          <use xlinkHref="#select-arrow-down"></use>
-        </svg>
+        <ReactSVG
+          beforeInjection={(svg) => {
+            svg.classList.add(styles.arrow);
+          }}
+          src={
+            new URL("../../assets/icons/down-caret.svg", import.meta.url)
+              .pathname
+          }
+        />
       </label>
-      <svg className={styles.sprites}>
-        <symbol id="select-arrow-down" viewBox="0 0 10 6">
-          <polyline points="1 1 5 5 9 1"></polyline>
-        </symbol>
-      </svg>
     </>
   );
 };
