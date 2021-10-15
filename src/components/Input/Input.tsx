@@ -15,6 +15,7 @@ const Input = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     changeFilter("name", e.target.value);
+
   return (
     <div className={styles.country__wrapper}>
       <input
