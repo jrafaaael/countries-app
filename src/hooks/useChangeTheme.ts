@@ -6,7 +6,11 @@ export const useChangeTheme = () => {
 
   const [isDarkMode, setIsDarkMode] = useState(userThemeIsDark);
 
-  const handleChangeTheme = () => setIsDarkMode((prev) => !prev);
+  const handleChangeTheme = () => setIsDarkMode(!isDarkMode);
+
+  useEffect(() => {
+    setIsDarkMode(userThemeIsDark)
+  }, [userThemeIsDark]);
 
   useEffect(() => {
     isDarkMode
