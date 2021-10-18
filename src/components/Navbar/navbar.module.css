@@ -1,12 +1,14 @@
 .navbar {
   width: 100%;
-  padding: 1rem 2rem;
+  height: 7.5vh;
+  padding: 0 2rem;
   background-color: var(--secondary-color);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .wrapper {
   max-width: var(--max-width);
+  height: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
