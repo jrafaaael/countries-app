@@ -1,11 +1,10 @@
 import { ChangeEvent } from "react";
-
 import { useCountriesContext } from "../../context/countries/useCountriesContext";
-
-import { ReactSVG } from "react-svg";
 
 import { CONTINENTS } from "../../helpers/constants/CONTINENTS";
 import { capitalize } from "../../helpers/functions/capitalize";
+
+import { ReactSVG } from "react-svg";
 
 import styles from "./select.module.css";
 
@@ -13,8 +12,6 @@ const Select = () => {
   const {
     countries: {
       filterBy: { region },
-      loading,
-      error,
     },
     changeFilter,
   } = useCountriesContext();
@@ -29,7 +26,6 @@ const Select = () => {
           className={styles.select}
           value={region}
           onChange={handleChange}
-          disabled={loading || error !== null}
         >
           <option className={styles.option} value="all" label="All"></option>
           {CONTINENTS.map((continent) => (

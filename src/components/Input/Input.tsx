@@ -7,8 +7,6 @@ const Input = () => {
   const {
     countries: {
       filterBy: { name },
-      error,
-      loading,
     },
     changeFilter,
   } = useCountriesContext();
@@ -21,7 +19,6 @@ const Input = () => {
       <input
         className={styles.country}
         value={name}
-        disabled={loading || error !== null}
         type="text"
         name="country"
         id="country"
