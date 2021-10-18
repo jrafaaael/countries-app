@@ -1,10 +1,16 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import Country from "../pages/Country/Country";
 import Home from "../pages/Home/Home";
+import NotFound from "../pages/NotFound/NotFound";
 
-import Navbar from "../components/Navbar/Navbar";
 import CountriesProvider from "../context/countries/CountriesProvider";
+import Navbar from "../components/Navbar/Navbar";
 
 const MainRouter = () => {
   return (
@@ -13,8 +19,10 @@ const MainRouter = () => {
       <>
         <CountriesProvider>
           <Switch>
-            <Route exact component={Country} path="/country/:code" />
             <Route exact component={Home} path="/" />
+            <Route exact component={Country} path="/country/:code" />
+            <Route component={NotFound} path="/notfound" />
+            <Redirect to="/notfound" />
           </Switch>
         </CountriesProvider>
       </>
