@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { useCountriesContext } from "../../context/countries/useCountriesContext";
 
 import CountryCard from "../CountryCard/CountryCard";
-import Loading from "../Loading/Loading";
 
 import styles from "./countries_list.module.css";
 
@@ -11,8 +10,6 @@ const CountriesList = () => {
     countries: {
       countries,
       filterBy: { name, region },
-      loading,
-      error,
     },
   } = useCountriesContext();
 
@@ -20,6 +17,7 @@ const CountriesList = () => {
     () =>
       countries.filter(
         (country) =>
+        // TODO: change property name to nativeName
           country.name.toLowerCase().includes(name.toLowerCase()) &&
           (country.region.toLowerCase().includes(region) || region === "all")
       ),
@@ -27,15 +25,19 @@ const CountriesList = () => {
   );
 
   return (
-    <section className={styles.countries}>
-      {loading ? (
-        <Loading />
+    <>
+      {countriesFiltered.length > 0 && countries.length > 0 ? (
+        <section className={styles.countries}>
+          {countriesFiltered.map((country) => (
+            <CountryCard key={country.name} {...country} />
+          ))}
+        </section>
       ) : (
-        countriesFiltered.map((country) => (
-          <CountryCard key={country.name} {...country} />
-        ))
+        <section>
+          <h2>Sorry, the country "{name}" doesn't exists.</h2>
+        </section>
       )}
-    </section>
+    </>
   );
 };
 
