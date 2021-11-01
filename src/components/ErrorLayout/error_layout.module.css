@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  font-size: 3.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+}
+
+.face {
+  font-size: 4rem;
+  transform: rotate(90deg);
+}
